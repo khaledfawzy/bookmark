@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/site.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="bookmark-header">Bookmark Manager</h1>
+            <hr class="dotted-line">
+            <h2 class="sub-header">Bookmark your favorite sites</h2>
+        </header>
+
+        <form id="bookmarkForm">
+            <div class="form-group">
+                <input type="text" id="siteName" placeholder="Site Name" required>
+            </div>
+            <div class="form-group">
+                <input type="url" id="siteURL" placeholder="Site URL" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submitBtn" class="btn btn-submit">Submit</button>
+            </div>
+        </form>
+
+        <hr class="dotted-line">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent">
+                <!-- Bookmark rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="box-info d-none">
+        <div class="modal-content">
+            <p>Site Name or URL is not valid, Please follow the rules below:</p>
+            <ul>
+                <li>Site name must contain at least 3 characters</li>
+                <li>Site URL must be a valid one</li>
+            </ul>
+            <button id="closeBtn" class="btn-close">Close</button>
+        </div>
+    </div>
+
+    <script src="./js/site.js"></script>
+</body>
+</html>
